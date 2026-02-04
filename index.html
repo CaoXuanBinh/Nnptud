@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Manager - 10 Câu</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Product Manager</h1>
+    </header>
+
+    <section class="grid">
+      <!-- LEFT: FORM -->
+      <div class="card">
+        <h2>Thêm sản phẩm</h2>
+        <form id="productForm" class="form">
+          <div class="row">
+            <label>Mã (id)</label>
+            <input id="id" required placeholder="P007" />
+          </div>
+
+          <div class="row">
+            <label>Tên (name)</label>
+            <input id="name" required placeholder="Nước hoa Dior..." />
+          </div>
+
+          <div class="row two">
+            <div>
+              <label>Giá (price)</label>
+              <input id="price" type="number" required placeholder="34990000" />
+            </div>
+            <div>
+              <label>Tồn kho (quantity)</label>
+              <input id="quantity" type="number" required placeholder="5" />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div>
+              <label>Danh mục (category)</label>
+              <select id="category" required>
+                <option value="Phone">Phone</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Perfume">Perfume</option>
+              </select>
+            </div>
+            <div>
+              <label>Đang bán? (isAvailable)</label>
+              <select id="isAvailable" required>
+                <option value="true">true</option>
+                <option value="false">false</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">+ Thêm</button>
+            <button type="button" id="resetBtn" class="btn">Reset</button>
+          </div>
+        </form>
+
+        <div class="hint">
+          <strong>Gợi ý:</strong> Bạn có thể thêm/sửa dữ liệu sản phẩm rồi bấm các nút “Chạy câu …”
+        </div>
+      </div>
+
+      <!-- RIGHT: BUTTONS -->
+      <div class="card">
+        <h2>Chạy yêu cầu đề bài</h2>
+        <div class="btnGrid">
+          <button class="btn" data-action="q3">Câu 3: name + price</button>
+          <button class="btn" data-action="q4">Câu 4: còn hàng (qty &gt; 0)</button>
+          <button class="btn" data-action="q5">Câu 5: có giá &gt; 30,000,000?</button>
+          <button class="btn" data-action="q6">Câu 6: Accessories đều isAvailable?</button>
+          <button class="btn" data-action="q7">Câu 7: tổng giá trị kho</button>
+          <button class="btn" data-action="q8">Câu 8: for...of in thông tin</button>
+          <button class="btn" data-action="q9">Câu 9: for...in (sp đầu)</button>
+          <button class="btn success" data-action="q10">Câu 10: đang bán &amp; còn hàng</button>
+        </div>
+
+        <div class="output">
+          <div class="outputHeader">
+            <h3>Kết quả xử lý</h3>
+            <button id="clearOut" class="btn small">Clear</button>
+          </div>
+          <pre id="result"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE -->
+    <section class="card">
+      <div class="tableHeader">
+        <h2>Danh sách sản phẩm</h2>
+        <div class="tableActions">
+          <button id="seedBtn" class="btn">Nạp dữ liệu mẫu (6 sp)</button>
+          <button id="clearProducts" class="btn danger">Xoá tất cả</button>
+        </div>
+      </div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>id</th>
+              <th>name</th>
+              <th>price</th>
+              <th>quantity</th>
+              <th>category</th>
+              <th>isAvailable</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+     
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

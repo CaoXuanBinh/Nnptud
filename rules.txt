@@ -1,0 +1,48 @@
+1. Khai báo constructor Product
+   - Tạo đối tượng Product với các thuộc tính:
+     + id: mã sản phẩm
+     + name: tên sản phẩm
+     + price: giá sản phẩm
+     + quantity: số lượng tồn kho
+     + category: danh mục sản phẩm
+     + isAvailable: trạng thái bán (true / false)
+
+2. Khởi tạo danh sách sản phẩm
+   - Tạo mảng products gồm ít nhất 6 sản phẩm
+   - Các sản phẩm thuộc tối thiểu 2 danh mục khác nhau
+
+3. Lấy danh sách thông tin cơ bản sản phẩm
+   - Tạo mảng mới chỉ chứa:
+     + tên sản phẩm (name)
+     + giá sản phẩm (price)
+
+4. Lọc sản phẩm còn hàng
+   - Lọc các sản phẩm có số lượng tồn kho > 0
+
+5. Kiểm tra sản phẩm giá cao
+   - Kiểm tra xem có ít nhất một sản phẩm
+     có giá lớn hơn 30.000.000 hay không
+
+6. Kiểm tra trạng thái bán của danh mục Accessories
+   - Kiểm tra tất cả sản phẩm thuộc danh mục "Accessories"
+     có đang được bán (isAvailable = true) hay không
+
+7. Tính tổng giá trị kho hàng
+   - Giá trị kho của mỗi sản phẩm = price × quantity
+   - Tổng giá trị kho = tổng giá trị của tất cả sản phẩm
+
+8. Duyệt danh sách sản phẩm bằng for...of
+   - In ra thông tin:
+     + Tên sản phẩm
+     + Danh mục
+     + Trạng thái bán
+
+9. Duyệt thuộc tính sản phẩm bằng for...in
+   - In ra tên từng thuộc tính
+   - In ra giá trị tương ứng của từng thuộc tính
+
+10. Lấy danh sách sản phẩm đang bán và còn hàng
+    - Lọc các sản phẩm thỏa điều kiện:
+      + isAvailable = true
+      + quantity > 0
+    - Trả về danh sách tên sản phẩm
